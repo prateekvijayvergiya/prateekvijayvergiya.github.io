@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: 100,
     },
     [theme.breakpoints.up('lg')]: {
-      marginLeft: 200,
+      marginLeft: 250,
     },
   },
   container: {
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       padding: 50,
-      marginLeft: 250,
+      marginLeft: 200,
     },
   },
 }))
