@@ -25,17 +25,17 @@ const HomePage = () => {
         <Grid item container justify="space-evenly" alignItems="center">
           <Grid item align='center'>
             <div className={classNames(classes.titleContainer, classes.resume)}>
-              <p>Hello</p>
+              <p>Resume</p>
             </div>
           </Grid>
           <Grid item align='center'>
             <div className={classNames(classes.titleContainer, classes.portfolio)}>
-              <p>Hello</p>
+              <p>My Work</p>
             </div>
           </Grid>
           <Grid item align='center'>
             <div className={classNames(classes.titleContainer, classes.skills)}>
-              <p>Hello</p>
+              <p>Skills</p>
             </div>
           </Grid>
         </Grid>
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'block',
     overflow: 'hidden',
     [theme.breakpoints.down('sm')]: {
-      width: 300,
+      width: 310,
       height: 300,
     },
   },

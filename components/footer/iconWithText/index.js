@@ -8,10 +8,10 @@ import Typography from '@material-ui/core/Typography'
 const IconWithText = ({icon: Icon, title, subtitle}) => {
   const classes = useStyles()
   return (
-    <Grid container alignItems="center" justify="center" spacing={2} item xs={12} sm={6} md={4}>
+    <Grid container alignItems="center" className={classes.container} spacing={2} item xs={12} md={4}>
       <Grid item>
         <Avatar className={classes.avatar}>
-          <SvgIcon htmlColor={'yellow'}>
+          <SvgIcon>
             <Icon/>
           </SvgIcon>
         </Avatar>
@@ -28,10 +28,16 @@ const IconWithText = ({icon: Icon, title, subtitle}) => {
   )
 }
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   avatar: {
-    backgroundColor: 'blue'
+    backgroundColor: '#61d0d4'
   },
+  container: {
+    justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'flex-start',
+    },
+  }
 }))
 
 export default IconWithText
