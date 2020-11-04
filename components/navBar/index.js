@@ -48,16 +48,19 @@ const AppNavBar = ({setCurrentPage}) => {
 const useStyles = makeStyles((theme) => ({
   collapse: {
     [theme.breakpoints.up('sm')]: {
-      marginLeft: 100,
+      marginLeft: 50,
     },
     [theme.breakpoints.up('lg')]: {
       marginLeft: 250,
     },
   },
   container: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.down('sm')]: {
+      padding: 0,
+      marginLeft: 0,
+    },
+    [theme.breakpoints.down('lg')]: {
       padding: 30,
-      marginLeft: 150,
     },
     [theme.breakpoints.up('lg')]: {
       padding: 50,

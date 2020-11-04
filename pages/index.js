@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from 'react'
+import AppFooter from '../components/footer'
 import HomePage from '../components/home'
 import NavBar from '../components/navBar'
+import Spacer from '../components/spacer'
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -9,6 +11,8 @@ export default function Home() {
     <Fragment>
       <NavBar {...{setCurrentPage}}/>
       {currentPage === 'home' && <HomePage {...{setCurrentPage}}/>}
+      <Spacer spacing={8}/>
+      <AppFooter/>
     </Fragment>
   )
 }

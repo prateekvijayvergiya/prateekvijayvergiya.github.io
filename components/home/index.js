@@ -7,7 +7,7 @@ import { Grid, Typography } from '@material-ui/core'
 const HomePage = () => {
   const classes = useStyles()
   return (
-    <Grid container justify="space-evenly">
+    <Grid container justify="space-evenly" >
       <Grid item xs={12} md={4} lg={4} align='center'> 
         <div className={classes.imageContainer}>
           <Image src='/profile.JPG' width={385} height={380}/>
@@ -54,6 +54,10 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '50%',
     display: 'block',
     overflow: 'hidden',
+    [theme.breakpoints.down('sm')]: {
+      width: 300,
+      height: 300,
+    },
   },
   titleContainer: {
     width: 130,
