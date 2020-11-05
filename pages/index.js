@@ -11,7 +11,7 @@ export default function Home() {
     <Fragment>
       <NavBar {...{setCurrentPage}}/>
       {currentPage === 'home' && <HomePage {...{setCurrentPage}}/>}
-      <Spacer spacing={8}/>
+      <Spacer spacing={7}/>
       <AppFooter/>
     </Fragment>
   )
