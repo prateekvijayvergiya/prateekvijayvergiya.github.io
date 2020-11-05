@@ -1,14 +1,14 @@
 {
+  "homepage": "https://prateekvijayvergiya.github.io",
   "name": "digital-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://gitname.github.io/react-gh-pages",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d .next"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
