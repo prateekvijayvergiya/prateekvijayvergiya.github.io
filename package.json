@@ -7,8 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "predeploy": "next export",
-    "deploy": "gh-pages -b master -d out && cd out && touch .nojeklyll"
+    "deploy": "next build && next export && cd out && touch .nojekyll  && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin master"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
