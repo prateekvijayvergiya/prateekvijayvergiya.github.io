@@ -8,7 +8,7 @@
     "build": "next build && next export",
     "clean": "rm -rf out",
     "start": "next start",
-    "deploy": "yarn build && touch out/.nojekyll && gh-pages -d ./out -b master -t"
+    "deploy": "yarn clean && yarn build && touch out/.nojekyll && gh-pages -d ./out -b master -t"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
