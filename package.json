@@ -7,8 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "predeploy": "next export && touch out .nojekyll",
-    "deploy": "gh-pages -b master -d out"
+    "predeploy": "next export",
+    "deploy": "gh-pages -b master -d out && cd out && touch .nojeklyll"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
