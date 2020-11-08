@@ -5,9 +5,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
+    "clean": "rm -rf out",
     "start": "next start",
-    "deploy": "next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin master"
+    "deploy": "yarn clean && yarn build && touch out/.nojekyll && gh-pages -d ./out -b master -t"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -15,7 +16,7 @@
     "@material-ui/styles": "^4.10.0",
     "bootstrap": "^4.5.3",
     "classnames": "^2.2.6",
-    "next": "10.0.0",
+    "next": "9.5.0",
     "react": "17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "17.0.1",

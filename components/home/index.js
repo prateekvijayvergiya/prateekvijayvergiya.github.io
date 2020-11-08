@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import classNames from 'classnames'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography } from '@material-ui/core'
@@ -10,7 +9,7 @@ const HomePage = () => {
     <Grid container justify="space-evenly" >
       <Grid item xs={12} md={4} lg={4} align='center'> 
         <div className={classes.imageContainer}>
-          <Image src='/profile.JPG' width={385} height={380}/>
+          <img src='/profile.JPG' width={385} height={380}/>
         </div>
       </Grid>
       <Grid item container xs={12} md={6} lg={6} justify="flex-start" spacing={2}>
