@@ -9,14 +9,14 @@ const IconWithText = ({icon: Icon, title, subtitle}) => {
   const classes = useStyles()
   return (
     <Grid container alignItems="center" className={classes.container} spacing={2} item xs={12} md={4}>
-      <Grid item>
+      <Grid item xs={2}>
         <Avatar className={classes.avatar}>
           <SvgIcon>
             <Icon/>
           </SvgIcon>
         </Avatar>
       </Grid>
-      <Grid item>
+      <Grid item xs={10}>
         <Typography variant={'h6'}>
           {title}
         </Typography>
