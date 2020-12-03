@@ -24,17 +24,17 @@ const HomePage = () => {
         <Grid item container justify="space-evenly" alignItems="center">
           <Grid item align='center'>
             <div className={classNames(classes.titleContainer, classes.resume)}>
-              <p>Resume</p>
+              <Typography>Resume</Typography>
             </div>
           </Grid>
           <Grid item align='center'>
             <div className={classNames(classes.titleContainer, classes.portfolio)}>
-              <p>My Work</p>
+              <Typography>My Work</Typography>
             </div>
           </Grid>
           <Grid item align='center'>
             <div className={classNames(classes.titleContainer, classes.skills)}>
-              <p>Skills</p>
+              <Typography>Skills</Typography>
             </div>
           </Grid>
         </Grid>

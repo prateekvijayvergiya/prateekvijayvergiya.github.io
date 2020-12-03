@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from 'react'
 import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/globals.css'
+import ThemeProvider from '../theme/themeProvider'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -21,7 +22,9 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head> 
-      <Component {...pageProps} />
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </Fragment>
   )
 }
