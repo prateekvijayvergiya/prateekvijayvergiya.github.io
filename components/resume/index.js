@@ -20,7 +20,7 @@ const Resume = () => {
         </Grid>
         <Grid item container>
           <Grid item container>
-            <Grid item>
+            <Grid item xs={8}>
               <Divider/>
             </Grid>
             <Grid item container>
