@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography } from '@material-ui/core'
+import RoundedTextArea from '../common/roundedTextArea'
 
 const HomePage = () => {
   const classes = useStyles()
@@ -23,19 +24,13 @@ const HomePage = () => {
         </Grid>
         <Grid item container justify="space-evenly" alignItems="center">
           <Grid item align='center'>
-            <div className={classNames(classes.titleContainer, classes.resume)}>
-              <Typography>Resume</Typography>
-            </div>
+            <RoundedTextArea text={'Resume'} backgroundColor={'#e83556'}/>
           </Grid>
           <Grid item align='center'>
-            <div className={classNames(classes.titleContainer, classes.portfolio)}>
-              <Typography>My Work</Typography>
-            </div>
+            <RoundedTextArea text={'My Work'} backgroundColor={'#61d0d4'}/>
           </Grid>
           <Grid item align='center'>
-            <div className={classNames(classes.titleContainer, classes.skills)}>
-              <Typography>Skills</Typography>
-            </div>
+            <RoundedTextArea text={'Skills'} backgroundColor={'#d1c926'}/>
           </Grid>
         </Grid>
         <Grid item>
@@ -58,31 +53,6 @@ const useStyles = makeStyles((theme) => ({
       height: 300,
     },
   },
-  titleContainer: {
-    width: 130,
-    height: 130,
-    borderRadius: '50%',
-    display: 'block',
-    overflow: 'hidden',
-    color: 'white',
-    cursor: 'pointer',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    [theme.breakpoints.down('sm')]: {
-      width: 85,
-      height: 85,
-    },
-  },
-  portfolio: {
-    backgroundColor: '#61d0d4'
-  },
-  skills: {
-    backgroundColor: '#d1c926'
-  },
-  resume: {
-    backgroundColor: '#e83556',
-  }
 }))
 
 export default HomePage
