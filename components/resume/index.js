@@ -1,10 +1,16 @@
 import React from 'react'
+
 import { Box, Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Divider from '@material-ui/core/Divider'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+
+import WorkExperience from './workExperience'
+import Education from './education'
 
 const Resume = () => {
   const classes = useStyles()
+  const largeScreen = useMediaQuery(theme => theme.breakpoints.up('sm'))
   return (
     <Box className={classes.container}>
       <Grid container>
@@ -18,16 +24,22 @@ const Resume = () => {
             Download
           </Grid>
         </Grid>
-        <Grid item container>
-          <Grid item container>
-            <Grid item xs={8}>
-              <Divider/>
-            </Grid>
-            <Grid item container>
-              <Grid item>
-                Hola
-              </Grid>
-            </Grid>
+        <Grid item container spacing={4} xs={12} sm={8}>
+          <Grid item xs={12}>
+            <Divider/>
+          </Grid>
+          <WorkExperience/>
+          <Grid item xs={12}>
+            <Divider/>
+          </Grid>
+          <Education/>
+        </Grid>
+        <Grid item container xs={12} sm={4} direction={largeScreen ? 'column' : 'row'}>
+          <Grid item>
+            Hola
+          </Grid>
+          <Grid item>
+            Hola
           </Grid>
         </Grid>
       </Grid> 

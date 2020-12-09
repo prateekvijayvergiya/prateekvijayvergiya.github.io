@@ -24,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: props => props.backgroundColor,
+    textAlign: 'center',
+    backgroundColor: props => props.backgroundColor || '#e83556',
     [theme.breakpoints.down('sm')]: {
       width: 85,
       height: 85,
