@@ -40,12 +40,12 @@ const Education = () => {
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    // marginTop: 16,
-    // marginBottom: 16,
-    // [theme.breakpoints.down('sm')]: {
-    //   marginTop: 8,
-    //   marginBottom: 0,
-    // },
+    marginTop: 16,
+    marginBottom: 16,
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 8,
+      marginBottom: 0,
+    },
   }
 }))
 
