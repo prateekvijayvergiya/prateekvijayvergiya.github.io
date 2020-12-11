@@ -1,12 +1,15 @@
 import React from 'react'
 
-import { Box, Grid, Typography } from '@material-ui/core'
+import { Box, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Divider from '@material-ui/core/Divider'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import Typography from '@material-ui/core/Typography'
 
 import WorkExperience from './workExperience'
 import Education from './education'
+import Skills from './skills'
+import Languages from './languages'
 
 const Resume = () => {
   const classes = useStyles()
@@ -36,11 +39,11 @@ const Resume = () => {
             <Education />
           </Grid>
           <Grid item container xs={12} sm={3} direction={largeScreen ? 'column' : 'row'}>
-            <Grid item>
-              Hola
+            <Grid item container xs={6} direction={'column'}>
+              <Skills/>
             </Grid>
-            <Grid item>
-              Hola
+            <Grid item container xs={6} direction={'column'}>
+              <Languages/>
             </Grid>
           </Grid>
         </Grid>
