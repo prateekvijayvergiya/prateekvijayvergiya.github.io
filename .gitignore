@@ -16,6 +16,9 @@ package-lock.json
 # production
 /build
 
+#secret keys
+/components/contact/contactForm/secretKeys.js
+
 # misc
 .DS_Store
 *.pem
