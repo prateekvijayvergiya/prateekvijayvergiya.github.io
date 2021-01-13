@@ -7,4 +7,25 @@ const theme = createMuiTheme({
   palette,
 })
 
+theme.overrides = {
+  MuiInputLabel: { 
+    root: { 
+      color: "black",
+      "&$focused": { 
+        color: "black"
+      }
+    }
+  },
+  MuiInputBase: {
+    root: {
+      color: 'black'
+    },
+    input: {
+      "&:-webkit-autofill": {
+        WebkitBoxShadow: "0 0 0 1000px #EAE5E5 inset"
+      }
+    }
+  }
+}
+
 export default theme

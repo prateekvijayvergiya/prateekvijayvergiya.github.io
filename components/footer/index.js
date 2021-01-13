@@ -9,11 +9,13 @@ import IconWithText from './iconWithText';
 const AppFooter = () => {
   const classes = useStyles()
   return (
-    <Grid container className={classes.container} justify="space-evenly" alignItems="center">
+    <footer>
+      <Grid container className={classes.container} justify="space-evenly" alignItems="center">
         <IconWithText icon={PhoneSharpIcon} title={'Call'} subtitle={'8058677244'}/>
         <IconWithText icon={MailOutlineSharpIcon} title={'Email'} subtitle={'prateek.vijayudr27@gmail.com'}/>
         <IconWithText icon={CopyrightSharpIcon} title={'Copyright © 2020'} subtitle={'by Prateek Vijayvergiya.'}/>
     </Grid>
+    </footer>
   )
 }
 
