@@ -19,22 +19,22 @@ const AppNavBar = ({setCurrentPage}) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav" className={classes.collapse}> 
         <Nav>
-          <Nav.Link onClick={() => setCurrentPage('home')}>
+          <Nav.Link href="#" onClick={() => setCurrentPage('home')}>
             <Typography>
               HOME
             </Typography>
           </Nav.Link>
-          <Nav.Link onClick={() => setCurrentPage('resume')}>
+          <Nav.Link href="#" onClick={() => setCurrentPage('resume')}>
             <Typography>
               RESUME
             </Typography>
           </Nav.Link>
-          <Nav.Link onClick={() => setCurrentPage('projects')}>
+          <Nav.Link href="#" onClick={() => setCurrentPage('projects')}>
             <Typography>
               PROJECTS
             </Typography>
           </Nav.Link>
-          <Nav.Link onClick={() => setCurrentPage('contact')}>
+          <Nav.Link href="#" onClick={() => setCurrentPage('contact')}>
             <Typography>
               CONTACT
             </Typography>
