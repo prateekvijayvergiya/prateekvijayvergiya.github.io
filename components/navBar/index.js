@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Typography from '@material-ui/core/Typography'
 
-const AppNavBar = ({setCurrentPage}) => {
+const AppNavBar = ({setCurrentPage, currentPage}) => {
   const classes = useStyles()
   return (
     <Navbar collapseOnSelect expand="sm" className={classes.container}>
@@ -20,22 +20,17 @@ const AppNavBar = ({setCurrentPage}) => {
       <Navbar.Collapse id="responsive-navbar-nav" className={classes.collapse}> 
         <Nav>
           <Nav.Link href="#" onClick={() => setCurrentPage('home')}>
-            <Typography>
+            <Typography color={currentPage === 'home' ? 'textSecondary' : 'initial'}>
               HOME
             </Typography>
           </Nav.Link>
           <Nav.Link href="#" onClick={() => setCurrentPage('resume')}>
-            <Typography>
+            <Typography color={currentPage === 'resume' ? 'textSecondary' : 'initial'}>
               RESUME
             </Typography>
           </Nav.Link>
-          <Nav.Link href="#" onClick={() => setCurrentPage('projects')}>
-            <Typography>
-              PROJECTS
-            </Typography>
-          </Nav.Link>
           <Nav.Link href="#" onClick={() => setCurrentPage('contact')}>
-            <Typography>
+            <Typography color={currentPage === 'contact' ? 'textSecondary' : 'initial'}>
               CONTACT
             </Typography>
           </Nav.Link>

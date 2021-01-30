@@ -11,7 +11,7 @@ export default function Home() {
   console.log(currentPage)
   return (
     <Fragment>
-      <NavBar {...{setCurrentPage}}/>
+      <NavBar {...{setCurrentPage, currentPage}}/>
       {currentPage === 'home' && <HomePage {...{setCurrentPage}}/>}
       {currentPage === 'resume' && <Resume {...{setCurrentPage}}/>}
       {currentPage === 'contact' && <Contact/>}

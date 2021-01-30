@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Divider from '@material-ui/core/Divider'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Typography from '@material-ui/core/Typography'
+import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded'
 
 import WorkExperience from './workExperience'
 import Education from './education'
@@ -19,12 +20,14 @@ const Resume = () => {
       <Grid container>
         <Grid item container justify='flex-end' alignItems="center">
           <Grid item xs={8} sm={8}>
-            <Typography variant={'h2'} gutterBottom>
+            <Typography variant={'h2'}>
               RESUME
             </Typography>
           </Grid>
-          <Grid item xs={4} sm={2}>
-            Download
+          <Grid item xs={4} sm={2} align={'center'} className={classes.downloadIcon}>
+            <a href={'/Prateek_Resume.pdf'} download={'Prateek_Resume.pdf'}>
+            <GetAppRoundedIcon />
+            </a>
           </Grid>
         </Grid>
         <Grid item container spacing={3}>
@@ -40,10 +43,10 @@ const Resume = () => {
           </Grid>
           <Grid item container xs={12} sm={3} direction={largeScreen ? 'column' : 'row'}>
             <Grid item container xs={6} direction={'column'}>
-              <Skills/>
+              <Skills />
             </Grid>
             <Grid item container xs={6} direction={'column'}>
-              <Languages/>
+              <Languages />
             </Grid>
           </Grid>
         </Grid>
@@ -59,6 +62,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       marginLeft: 8,
       marginRight: 8,
+    },
+  },
+  downloadIcon: {
+    '&:hover': {
+      cursor: 'pointer',
     },
   }
 }))
