@@ -20,13 +20,13 @@ const Resume = () => {
       <Grid container>
         <Grid item container justify='flex-end' alignItems="center">
           <Grid item xs={8} sm={8}>
-            <Typography variant={'h2'}>
+            <Typography variant={'h2'} gutterBottom>
               RESUME
             </Typography>
           </Grid>
           <Grid item xs={4} sm={2} align={'center'} className={classes.downloadIcon}>
             <a href={'/Prateek_Resume.pdf'} download={'Prateek_Resume.pdf'}>
-            <GetAppRoundedIcon />
+              <GetAppRoundedIcon />
             </a>
           </Grid>
         </Grid>
@@ -68,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       cursor: 'pointer',
     },
+    
   }
 }))
 

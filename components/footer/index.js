@@ -11,10 +11,10 @@ const AppFooter = () => {
   return (
     <footer>
       <Grid container className={classes.container} justify="space-evenly" alignItems="center">
-        <IconWithText icon={PhoneSharpIcon} title={'Call'} subtitle={'8058677244'}/>
-        <IconWithText icon={MailOutlineSharpIcon} title={'Email'} subtitle={'prateek.vijayudr27@gmail.com'}/>
-        <IconWithText icon={CopyrightSharpIcon} title={'Copyright © 2020'} subtitle={'by Prateek Vijayvergiya.'}/>
-    </Grid>
+        <IconWithText icon={PhoneSharpIcon} title={'Call'} subtitle={'8058677244'} />
+        <IconWithText icon={MailOutlineSharpIcon} title={'Email'} subtitle={'prateek.vijayudr27@gmail.com'} />
+        <IconWithText icon={CopyrightSharpIcon} title={'No © copyright issues'} subtitle={'Feel free to copy'} />
+      </Grid>
     </footer>
   )
 }

@@ -3,9 +3,12 @@ import { Box, Grid, Link, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import TwitterIcon from '@material-ui/icons/Twitter'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Spacer from '../spacer';
 import ContactForm from './contactForm'
+import LinkIcons from './linkIcons'
 
 const Contact = () => {
   const classes = useStyles()
@@ -26,20 +29,10 @@ const Contact = () => {
             <Spacer spacing={6} />
           </Grid>
           <Grid item>
-            <Link 
-              href={'https://www.facebook.com/prateek.vijay.73'} 
-              target={'blank'} 
-              color={'inherit'} 
-              className={classes.icon}>
-                <FacebookIcon fontSize={'large'} color={'inherit'} />
-            </Link>
-            <Link 
-              href={'https://www.instagram.com/prateekvijayvergiya/'} 
-              target={'blank'} 
-              color={'inherit'} 
-              className={classes.icon}>
-                <InstagramIcon fontSize={'large'} />
-            </Link>
+            <LinkIcons href={'https://www.facebook.com/prateek.vijay.73'} icon={FacebookIcon} />
+            <LinkIcons href={'https://www.instagram.com/prateekvijayvergiya/'} icon={InstagramIcon} />
+            <LinkIcons href={'https://www.linkedin.com/in/prateekvijayvergiya/'} icon={LinkedInIcon} />
+            <LinkIcons href={'https://twitter.com/prateekvijay18'} icon={TwitterIcon} />
           </Grid>
         </Grid>
         <Grid container spacing={2} item xs={12} sm={6} justify={!largeScreen ? 'center' : 'flex-start'}>
@@ -47,8 +40,21 @@ const Contact = () => {
             Looking Forward
           </Grid>
           <Grid item xs={12}>
-            <ContactForm/>
+            <ContactForm />
           </Grid>
+        </Grid>
+      </Grid>
+      <Spacer spacing={5} />
+      <Grid container justify={'center'} direction={'column'} alignItems={'center'}>
+        <Grid item>
+          <Typography fontFamily={'ProximaNovaT'} variant={'h5'} gutterBottom>
+            Coffee with me.
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant={'body1'}>
+            Always up for discussing new projects and ideas, so just ping me and we will discuss it over a cup of coffee.
+          </Typography>
         </Grid>
       </Grid>
     </Box>
