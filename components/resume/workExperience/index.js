@@ -20,7 +20,7 @@ const WorkExperience = () => {
           2019 - Present
         </Typography>
         <Typography>
-          Placeholder
+          Placeholder words
         </Typography>
         <Spacer/>
         <Typography variant={'h5'}>
@@ -30,7 +30,7 @@ const WorkExperience = () => {
           May 2018 - July 2018
         </Typography>
         <Typography>
-          Placeholder
+          Placeholder words
         </Typography>
       </Grid>
     </Grid>
