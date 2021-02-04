@@ -27,8 +27,8 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-
-      - run: ls -LR
+            
+      - run: cd ../.. && ls -LR
       - run: yarn install --frozen-lockfile
       - run: yarn build
 
