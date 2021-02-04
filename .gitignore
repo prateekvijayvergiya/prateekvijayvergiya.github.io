@@ -17,7 +17,7 @@ package-lock.json
 /build
 
 #secret keys
-/components/contact/contactForm/secretKeys.js
+# /components/contact/contactForm/secretKeys.js
 
 # misc
 .DS_Store
