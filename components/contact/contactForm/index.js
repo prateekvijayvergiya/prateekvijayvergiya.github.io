@@ -7,7 +7,6 @@ import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import * as Yup from "yup"
 import Spacer from "../../spacer"
-import {serviceId, templateId, userId} from './secretKeys'
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().min(2).max(20).required("Required"),
@@ -27,7 +26,7 @@ const ContactForm = () => {
     },
     validationSchema,
     onSubmit: (values) => {
-      emailjs.send(serviceId, templateId, values, userId)
+      emailjs.send(process.env.serviceId, process.env.templateId, values, process.env.userId)
     },
     validateOnChange: R.isEmpty(touched) ? false : true
   })

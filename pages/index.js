@@ -8,7 +8,6 @@ import Spacer from '../components/spacer'
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState('home')
-  console.log(currentPage)
   return (
     <Fragment>
       <NavBar {...{setCurrentPage, currentPage}}/>
