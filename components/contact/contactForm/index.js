@@ -19,6 +19,7 @@ const validationSchema = Yup.object().shape({
 const ContactForm = () => {
   const classes = useStyles()
   console.log(process.env.serviceId, process.env.templateId, process.env.userId)
+  console.log('new', process.env.NEXT_PUBLIC_SERVICE_ID,)
   const { handleSubmit, handleChange, values, errors, touched } = useFormik({
     initialValues: {
       name: "",
@@ -27,7 +28,7 @@ const ContactForm = () => {
     },
     validationSchema,
     onSubmit: (values) => {
-      emailjs.send(process.env.serviceId, process.env.templateId, values, process.env.userId)
+      emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, values, process.env.NEXT_PUBLIC_USER_ID)
     },
     validateOnChange: R.isEmpty(touched) ? false : true
   })
