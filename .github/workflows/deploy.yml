@@ -32,7 +32,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - run: yarn install --frozen-lockfile
-      - run: ls && cat .env.production.local
       - run: yarn build 
 
       - name: Deploy
