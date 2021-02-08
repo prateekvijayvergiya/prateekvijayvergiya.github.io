@@ -33,6 +33,7 @@ jobs:
           echo NEXT_PUBLIC_SERVICE_ID=${{secrets.NEXT_PUBLIC_SERVICE_ID}} >> .env.production.local
           echo NEXT_PUBLIC_TEMPLATE_ID=${{secrets.NEXT_PUBLIC_TEMPLATE_ID}} >> .env.production.local
           echo NEXT_PUBLIC_USER_ID=${{secrets.NEXT_PUBLIC_USER_ID}} >> .env.production.local
+      - run: ls && cat .env.production.local
       - run: yarn build
         env: 
           NEXT_PUBLIC_SERVICE_ID: ${{secrets.NEXT_PUBLIC_SERVICE_ID}}
