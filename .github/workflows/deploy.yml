@@ -21,6 +21,10 @@ jobs:
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - name: Cache dependencies
+        env: 
+          NEXT_PUBLIC_SERVICE_ID: ${{secrets.NEXT_PUBLIC_SERVICE_ID}}
+          NEXT_PUBLIC_TEMPLATE_ID: ${{secrets.NEXT_PUBLIC_TEMPLATE_ID}}
+          NEXT_PUBLIC_USER_ID: ${{secrets.NEXT_PUBLIC_USER_ID}} 
         uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
@@ -28,25 +32,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - run: yarn install --frozen-lockfile
-      - run: |
-          touch .env.production.local
-          echo NEXT_PUBLIC_SERVICE_ID=${{secrets.NEXT_PUBLIC_SERVICE_ID}} >> .env.production.local
-          echo NEXT_PUBLIC_TEMPLATE_ID=${{secrets.NEXT_PUBLIC_TEMPLATE_ID}} >> .env.production.local
-          echo NEXT_PUBLIC_USER_ID=${{secrets.NEXT_PUBLIC_USER_ID}} >> .env.production.local
       - run: ls && cat .env.production.local
-      - run: yarn build
+      - run: yarn build 
+
+      - name: Deploy
         env: 
           NEXT_PUBLIC_SERVICE_ID: ${{secrets.NEXT_PUBLIC_SERVICE_ID}}
           NEXT_PUBLIC_TEMPLATE_ID: ${{secrets.NEXT_PUBLIC_TEMPLATE_ID}}
-          NEXT_PUBLIC_USER_ID: ${{secrets.NEXT_PUBLIC_USER_ID}}  
-
-      - name: Deploy
+          NEXT_PUBLIC_USER_ID: ${{secrets.NEXT_PUBLIC_USER_ID}}
         run: |
             git config --global user.email ${{secrets.EMAIL}}
             git config --global user.name ${{secrets.USERNAME}}
             git remote set-url origin https://${{secrets.ACCESS_TOKEN}}@github.com/${{secrets.USERNAME}}/prateekvijayvergiya.github.io.git
             yarn deploy
-        env: 
-          NEXT_PUBLIC_SERVICE_ID: ${{secrets.NEXT_PUBLIC_SERVICE_ID}}
-          NEXT_PUBLIC_TEMPLATE_ID: ${{secrets.NEXT_PUBLIC_TEMPLATE_ID}}
-          NEXT_PUBLIC_USER_ID: ${{secrets.NEXT_PUBLIC_USER_ID}}
