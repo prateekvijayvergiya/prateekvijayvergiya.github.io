@@ -20,8 +20,6 @@ const validationSchema = Yup.object().shape({
 const ContactForm = () => {
   const classes = useStyles()
   const [submitting, setSubmitting] = useState(false)
-  console.log(process.env.serviceId, process.env.templateId, process.env.userId)
-  console.log('new', process.env.NEXT_PUBLIC_SERVICE_ID,)
   const { handleSubmit, handleChange, values, errors, touched, resetForm } = useFormik({
     initialValues: {
       name: "",

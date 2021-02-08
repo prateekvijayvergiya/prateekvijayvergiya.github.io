@@ -21,20 +21,13 @@ jobs:
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - name: Cache dependencies
-        env: 
-          NEXT_PUBLIC_SERVICE_ID: ${{secrets.NEXT_PUBLIC_SERVICE_ID}}
-          NEXT_PUBLIC_TEMPLATE_ID: ${{secrets.NEXT_PUBLIC_TEMPLATE_ID}}
-          NEXT_PUBLIC_USER_ID: ${{secrets.NEXT_PUBLIC_USER_ID}} 
         uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - run: yarn install --frozen-lockfile
-      
-      - run: yarn build 
-
+      - run: yarn install --frozen-lockfile      
       - name: Deploy
         env: 
           NEXT_PUBLIC_SERVICE_ID: ${{secrets.NEXT_PUBLIC_SERVICE_ID}}
