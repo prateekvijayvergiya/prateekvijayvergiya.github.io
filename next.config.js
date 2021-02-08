@@ -7,4 +7,5 @@ module.exports = {
     templateId: process.env.NEXT_PUBLIC_TEMPLATE_ID,
     userId: process.env.NEXT_PUBLIC_USER_ID,
   },
+  
 }
