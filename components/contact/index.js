@@ -1,10 +1,6 @@
 import React from 'react'
-import { Box, Grid, Link, Typography } from '@material-ui/core'
+import { Box, Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import FacebookIcon from '@material-ui/icons/Facebook'
-import InstagramIcon from '@material-ui/icons/Instagram'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import TwitterIcon from '@material-ui/icons/Twitter'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Spacer from '../spacer';
 import ContactForm from './contactForm'
