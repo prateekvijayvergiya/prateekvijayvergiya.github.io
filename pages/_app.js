@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         />
         <link rel="icon" href="/favicon.ico" />
-      </Head> 
+      </Head>
       <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>

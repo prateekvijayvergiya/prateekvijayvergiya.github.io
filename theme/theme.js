@@ -1,10 +1,12 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import palette from './palette'
+import typography from './typography'
 
 export const Spacing = 8
 
 const theme = createMuiTheme({
   palette,
+  typography
 })
 
 theme.overrides = {
