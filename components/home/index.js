@@ -5,12 +5,13 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import RoundedTextArea from '../common/roundedTextArea'
 import BottomItems from './bottomItems'
 import Spacer from '../spacer'
+import { Fragment } from 'react'
 
 const HomePage = () => {
   const classes = useStyles()
   const largeScreen = useMediaQuery(theme => theme.breakpoints.up('sm'))
   return (
-    <Grid container direction={'column'}>
+    <Fragment>
       <Grid container item justify="space-evenly" >
         <Grid item xs={12} md={4} lg={4} align='center'>
           <div className={classes.imageContainer}>
@@ -47,15 +48,13 @@ const HomePage = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item>
-        <Spacer spacing={4} />
-      </Grid>
-      <Grid item container justify="space-evenly" direction={!largeScreen ? 'column' : 'row'}>
+      <Spacer spacing={4} />
+      <Grid container justify="space-evenly" direction={!largeScreen ? 'column' : 'row'}>
         <BottomItems value={'15 000'} text={'lines of code'} />
         <BottomItems value={'1 000 000'} text={'pixels rendered'} />
         <BottomItems value={'432'} text={'cups of coffee drunk'} />
       </Grid>
-    </Grid>
+    </Fragment>
   )
 }
 

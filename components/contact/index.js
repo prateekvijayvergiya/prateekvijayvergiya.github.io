@@ -57,6 +57,9 @@ const Contact = () => {
           </Typography>
         </Grid>
       </Grid>
+      <Grid container justify={'center'} direction={'column'} alignItems={'center'}>
+        <Grid item></Grid>
+      </Grid>
     </Box>
   )
 }
