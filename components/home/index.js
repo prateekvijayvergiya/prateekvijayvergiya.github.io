@@ -15,7 +15,7 @@ const HomePage = () => {
       <Grid container item justify="space-evenly" >
         <Grid item xs={12} md={4} lg={4} align='center'>
           <div className={classes.imageContainer}>
-            <img src='/profile1.JPG' width={'100%'} height={'100%'} />
+            <img src='/profile1.jpg' width={'100%'} height={'100%'} />
           </div>
         </Grid>
         <Grid item container xs={12} md={6} lg={6} justify="flex-start" spacing={2}>
