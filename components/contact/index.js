@@ -1,10 +1,11 @@
 import React from 'react'
-import { Box, Grid, Typography } from '@material-ui/core'
+import { Box, Grid, Link, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Spacer from '../spacer';
 import ContactForm from './contactForm'
 import LinkIcons from './linkIcons'
+import { none } from 'ramda';
 
 const Contact = () => {
   const classes = useStyles()
@@ -36,7 +37,7 @@ const Contact = () => {
         <Grid container spacing={2} item xs={12} sm={6} justify={!largeScreen ? 'center' : 'flex-start'}>
           <Grid item xs={12}>
             <Typography variant={'h5'} gutterBottom>
-              Looking forward to connect with me then drop a mail 
+              Looking forward to connect with me then drop a mail
             </Typography>
           </Grid>
           <Grid item xs={12}>
@@ -58,7 +59,9 @@ const Contact = () => {
         </Grid>
       </Grid>
       <Grid container justify={'center'} direction={'column'} alignItems={'center'}>
-        <Grid item></Grid>
+        <Grid item>
+          Made with ❤️ and handle with 😷 by <Link className={classes.icon} href={'https://github.com/prateekvijayvergiya/'}>Prateek Vijayvergiya aka prateekvijayvergiya</Link>
+        </Grid>
       </Grid>
     </Box>
   )
@@ -74,10 +77,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   icon: {
+    color: '#e83556',
     '&:hover': {
-      color: 'inherit'
+      color: '#e83556'
     },
-  }
+  },
 }))
 
 export default Contact
