@@ -10,12 +10,18 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState('home')
   return (
     <Fragment>
-      <NavBar {...{setCurrentPage, currentPage}}/>
-      {currentPage === 'home' && <HomePage {...{setCurrentPage}}/>}
-      {currentPage === 'resume' && <Resume {...{setCurrentPage}}/>}
-      {currentPage === 'contact' && <Contact/>}
-      <Spacer spacing={7}/>
-      <AppFooter/>
+      <div id='navBar'>
+        <NavBar {...{ setCurrentPage, currentPage }} />
+      </div>
+      <div id='content'>
+        {currentPage === 'home' && <HomePage {...{ setCurrentPage }} />}
+        {currentPage === 'resume' && <Resume {...{ setCurrentPage }} />}
+        {currentPage === 'contact' && <Contact />}
+        <Spacer spacing={7} />
+      </div>
+      <div id='footer'>
+        <AppFooter />
+      </div>
     </Fragment>
   )
 }

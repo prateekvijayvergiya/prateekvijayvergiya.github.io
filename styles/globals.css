@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  height: 100vh;
 }
 
 a {
@@ -11,4 +12,22 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+#navBar {
+  flex-grow: 1;
+}
+
+#content {
+  flex-grow: 99;
+}
+
+#footer {
+  flex-grow: 1;
+}
+
+#__next {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

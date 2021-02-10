@@ -5,7 +5,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Spacer from '../spacer';
 import ContactForm from './contactForm'
 import LinkIcons from './linkIcons'
-import { none } from 'ramda';
 
 const Contact = () => {
   const classes = useStyles()
@@ -60,7 +59,7 @@ const Contact = () => {
       </Grid>
       <Grid container justify={'center'} direction={'column'} alignItems={'center'}>
         <Grid item>
-          Made with ❤️ and handle with 😷 by <Link className={classes.icon} href={'https://github.com/prateekvijayvergiya/'}>Prateek Vijayvergiya aka prateekvijayvergiya</Link>
+          Made with ❤️ and handle with 😷 by <Link target='_blank' className={classes.icon} href={'https://github.com/prateekvijayvergiya/'}>Prateek Vijayvergiya aka prateekvijayvergiya</Link>
         </Grid>
       </Grid>
     </Box>
