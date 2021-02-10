@@ -3,6 +3,7 @@ import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/globals.css'
 import ThemeProvider from '../theme/themeProvider'
+import { CookiesProvider } from 'react-cookie'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -23,7 +24,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider>
-        <Component {...pageProps} />
+        <CookiesProvider>
+          <Component {...pageProps} />
+        </CookiesProvider>
       </ThemeProvider>
     </Fragment>
   )

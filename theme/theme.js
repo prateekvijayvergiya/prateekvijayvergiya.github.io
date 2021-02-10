@@ -10,10 +10,10 @@ const theme = createMuiTheme({
 })
 
 theme.overrides = {
-  MuiInputLabel: { 
-    root: { 
+  MuiInputLabel: {
+    root: {
       color: "black",
-      "&$focused": { 
+      "&$focused": {
         color: "black"
       }
     }
@@ -26,6 +26,13 @@ theme.overrides = {
       "&:-webkit-autofill": {
         WebkitBoxShadow: "0 0 0 1000px #EAE5E5 inset"
       }
+    }
+  },
+  MuiPaper: {
+    root: {
+      backgroundColor: 'black',
+      opacity: 0.8,
+      color: 'white'
     }
   }
 }
