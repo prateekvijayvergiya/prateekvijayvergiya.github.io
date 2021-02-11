@@ -59,7 +59,9 @@ const Contact = () => {
       </Grid>
       <Grid container justify={'center'} direction={'column'} alignItems={'center'}>
         <Grid item>
-          Made with ❤️ and handle with 😷 by <Link target='_blank' className={classes.icon} href={'https://github.com/prateekvijayvergiya/'}>Prateek Vijayvergiya aka prateekvijayvergiya</Link>
+          <Typography>
+            Made with ❤️ and handle with 😷 care by <Link target='_blank' className={classes.icon} href={'https://github.com/prateekvijayvergiya/'}>Prateek Vijayvergiya aka prateekvijayvergiya</Link>
+          </Typography>
         </Grid>
       </Grid>
     </Box>

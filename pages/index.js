@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <Fragment>
-      {/* <WelcomeGreetings {...{ canShowGreeting }} /> */}
+      <WelcomeGreetings {...{ canShowGreeting, setCanShowGreeting }} />
       <div id='navBar'>
         <NavBar {...{ setCurrentPage, currentPage }} />
       </div>

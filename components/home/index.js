@@ -29,13 +29,13 @@ const HomePage = () => {
           </Grid>
           <Grid item container justify="space-evenly" alignItems="center">
             <Grid item align='center'>
-              <RoundedTextArea text={'Resume'} backgroundColor={'#e83556'} />
+              <RoundedTextArea text={'Hard Working'} backgroundColor={'#e83556'} />
             </Grid>
             <Grid item align='center'>
-              <RoundedTextArea text={'My Work'} backgroundColor={'#61d0d4'} />
+              <RoundedTextArea text={'Calm Nature'} backgroundColor={'#61d0d4'} />
             </Grid>
             <Grid item align='center'>
-              <RoundedTextArea text={'Skills'} backgroundColor={'#d1c926'} />
+              <RoundedTextArea text={'Positive Thinker'} backgroundColor={'#d1c926'} />
             </Grid>
           </Grid>
           <Grid item>

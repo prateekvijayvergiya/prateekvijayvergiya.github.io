@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'block',
     overflow: 'hidden',
     color: 'white',
-    cursor: 'pointer',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
