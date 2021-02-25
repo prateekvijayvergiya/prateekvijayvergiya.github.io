@@ -20,7 +20,7 @@ const Contact = () => {
           </Grid>
           <Grid item>
             <Typography variant={'h6'}>
-              You hello find me socially over here
+              You can find me socially over here
             </Typography>
           </Grid>
           <Grid item>
