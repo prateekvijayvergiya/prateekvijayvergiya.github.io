@@ -20,7 +20,7 @@ const Contact = () => {
           </Grid>
           <Grid item>
             <Typography variant={'h6'}>
-              You can find me socially over here
+              You can find me socially over here.
             </Typography>
           </Grid>
           <Grid item>
@@ -51,14 +51,14 @@ const Contact = () => {
             Coffee with me.
           </Typography>
         </Grid>
-        <Grid item>
+        <Grid item align='center'>
           <Typography variant={'h6'}>
             Always up for discussing new projects and ideas, so just ping me and we will discuss it over a cup of coffee.
           </Typography>
         </Grid>
       </Grid>
       <Grid container justify={'center'} direction={'column'} alignItems={'center'}>
-        <Grid item>
+        <Grid item align='center'>
           <Typography>
             Made with ❤️ and handle with 😷 care by <Link target='_blank' className={classes.icon} href={'https://github.com/prateekvijayvergiya/'}>Prateek Vijayvergiya aka prateekvijayvergiya</Link>
           </Typography>
