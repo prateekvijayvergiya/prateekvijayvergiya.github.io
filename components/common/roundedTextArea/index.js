@@ -29,7 +29,10 @@ const useStyles = makeStyles((theme) => ({
       width: 85,
       height: 85,
     },
-  }
+    '&:hover': {
+      opacity: 0.9,
+    },
+  },
 }))
 
 export default RoundedTextArea

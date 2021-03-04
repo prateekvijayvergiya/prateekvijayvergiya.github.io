@@ -34,6 +34,14 @@ theme.overrides = {
       opacity: 0.8,
       color: 'white'
     }
+  },
+  MuiCardContent: {
+    root: {
+      padding: 8,
+      '&:last-child': {
+        paddingBottom: 8,
+      }
+    }
   }
 }
 

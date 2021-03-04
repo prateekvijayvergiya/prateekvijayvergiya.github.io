@@ -5,9 +5,9 @@ import Contact from '../components/contact'
 import AppFooter from '../components/footer'
 import HomePage from '../components/home'
 import NavBar from '../components/navBar'
-import Resume from '../components/resume'
 import Spacer from '../components/spacer'
 import WelcomeGreetings from '../components/welcome'
+import Skills from '../components/skills'
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -32,8 +32,8 @@ export default function Home() {
         <NavBar {...{ setCurrentPage, currentPage }} />
       </div>
       <div id='content'>
-        {currentPage === 'home' && <HomePage {...{ setCurrentPage }} />}
-        {currentPage === 'resume' && <Resume {...{ setCurrentPage }} />}
+        {currentPage === 'home' && <HomePage />}
+        {currentPage === 'resume' && <Skills />}
         {currentPage === 'contact' && <Contact />}
         <Spacer spacing={7} />
       </div>
