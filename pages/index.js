@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import * as R from 'ramda'
 import { useCookies } from 'react-cookie'
+
 import Contact from '../components/contact'
 import AppFooter from '../components/footer'
 import HomePage from '../components/home'

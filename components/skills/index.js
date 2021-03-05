@@ -7,6 +7,7 @@ import Core from './core'
 import Frameworks from './framework'
 import Others from './others'
 import Spacer from '../spacer'
+import Blogs from './blogs'
 
 const Skills = () => {
   const classes = useStyles()
@@ -21,8 +22,10 @@ const Skills = () => {
       <Frameworks />
       <Others />
       <Spacer spacing={5}/>
-      <Grid item align={'center'}>
-        <Typography variant={'h3'} gutterBottom>
+      <Blogs/>
+      <Spacer spacing={5}/>
+      <Grid item>
+        <Typography variant={'h3'} gutterBottom align={'center'}>
           Download my Resume
         </Typography>
       </Grid>

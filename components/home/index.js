@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography } from '@material-ui/core'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import RoundedTextArea from '../common/roundedTextArea'
 import BottomItems from './bottomItems'
 import Spacer from '../spacer'
-import { Fragment } from 'react'
 
 const HomePage = () => {
   const classes = useStyles()
@@ -29,7 +28,7 @@ const HomePage = () => {
           </Grid>
           <Grid item container justify="space-evenly" alignItems="center">
             <Grid item align='center'>
-              <RoundedTextArea text={'Hard Working'} backgroundColor={'#e83556'} />
+              <RoundedTextArea text={'Smart Working'} backgroundColor={'#e83556'} />
             </Grid>
             <Grid item align='center'>
               <RoundedTextArea text={'Calm Nature'} backgroundColor={'#61d0d4'} />

@@ -24,7 +24,7 @@ theme.overrides = {
     },
     input: {
       "&:-webkit-autofill": {
-        WebkitBoxShadow: "0 0 0 1000px #EAE5E5 inset"
+        WebkitBoxShadow: "0 0 0 1000px #ffffff inset"
       }
     }
   },

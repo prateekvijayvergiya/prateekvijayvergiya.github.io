@@ -13,7 +13,7 @@ const Others = () => {
       </Grid>
       <Grid item container xs={12} spacing={1} md={8} justify={'space-evenly'}>
         <Grid item>
-          <IconWithText icon='/skills/mongodb.png' text='MongoDB' />
+          <IconWithText icon='/skills/mongodb.jpg' text='MongoDB' />
         </Grid>
         <Grid item>
           <IconWithText icon='/skills/graphql.png' text='Graphql' />
