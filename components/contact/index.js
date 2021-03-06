@@ -60,7 +60,7 @@ const Contact = () => {
       <Grid container justify={'center'} direction={'column'} alignItems={'center'}>
         <Grid item align='center'>
           <Typography>
-            Made with ❤️ and handle with 😷 care by <Link target='_blank' className={classes.icon} href={'https://github.com/prateekvijayvergiya/'}>Prateek Vijayvergiya aka prateekvijayvergiya</Link>
+            Made with ❤️ and handled with 😷 care by <Link target='_blank' className={classes.link} href={'https://github.com/prateekvijayvergiya/'}>Prateek Vijayvergiya aka prateekvijayvergiya</Link>
           </Typography>
         </Grid>
       </Grid>
@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
       marginRight: 8,
     },
   },
-  icon: {
+  link: {
     color: '#e83556',
     '&:hover': {
       color: '#e83556'
