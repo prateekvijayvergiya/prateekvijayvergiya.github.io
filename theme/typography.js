@@ -1,4 +1,4 @@
-const fontFamily = 'Kalam, cursive, Roboto'
+const fontFamily = 'Pangolin, cursive'
 
 export default {
   fontFamily
