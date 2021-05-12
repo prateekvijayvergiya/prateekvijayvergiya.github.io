@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     console.log('inside effect',process.env.NEXT_PUBLIC_POSTHOG_ID)
     if (!window.location.href.includes('localhost')) {
-      posthog.init(`${process.env.NEXT_PUBLIC_POSTHOG_ID}`, { api_host: 'https://app.posthog.com' })
+      posthog.init(process.env.NEXT_PUBLIC_POSTHOG_ID, { api_host: 'https://app.posthog.com' })
     }
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
