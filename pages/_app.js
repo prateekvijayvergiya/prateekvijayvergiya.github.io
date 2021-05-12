@@ -8,9 +8,7 @@ import { CookiesProvider } from 'react-cookie'
 import posthog from 'posthog-js'
 
 function MyApp({ Component, pageProps }) {
-  console.log('outside effect',process.env.NEXT_PUBLIC_POSTHOG_ID)
   useEffect(() => {
-    console.log('inside effect',process.env.NEXT_PUBLIC_POSTHOG_ID)
     if (!window.location.href.includes('localhost')) {
       posthog.init(process.env.NEXT_PUBLIC_POSTHOG_ID, { api_host: 'https://app.posthog.com' })
     }

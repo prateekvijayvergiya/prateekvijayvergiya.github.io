@@ -33,6 +33,7 @@ jobs:
           NEXT_PUBLIC_SERVICE_ID: ${{secrets.NEXT_PUBLIC_SERVICE_ID}}
           NEXT_PUBLIC_TEMPLATE_ID: ${{secrets.NEXT_PUBLIC_TEMPLATE_ID}}
           NEXT_PUBLIC_USER_ID: ${{secrets.NEXT_PUBLIC_USER_ID}}
+          NEXT_PUBLIC_POSTHOG_ID: ${{secrets.NEXT_PUBLIC_POSTHOG_ID}}
         run: |
             git config --global user.email ${{secrets.EMAIL}}
             git config --global user.name ${{secrets.USERNAME}}
