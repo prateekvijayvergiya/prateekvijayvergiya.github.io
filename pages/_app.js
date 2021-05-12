@@ -17,7 +17,16 @@ function MyApp({ Component, pageProps }) {
     <Fragment>
       <Head>
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}></script>
-        <script type="text/javascript" src="/analytics.js"/>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+        `,
+          }}
+        />
         <title>Prateek Vijayvergiya</title>
         <link
           rel="stylesheet"
