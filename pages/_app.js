@@ -16,6 +16,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
       <Head>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}></script>
+        <script type="text/javascript" src="/analytics.js"/>
         <title>Prateek Vijayvergiya</title>
         <link
           rel="stylesheet"
