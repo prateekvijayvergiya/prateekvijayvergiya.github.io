@@ -4,9 +4,21 @@ import { ServerStyleSheets } from '@material-ui/core/styles';
 
 export default class MyDocument extends Document {
   render() {
+    const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
     return (
       <Html lang="en">
         <Head>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${measurementId}');
+        `,
+            }}
+          />
           {/* PWA primary color */}
           <link
             rel="stylesheet"
