@@ -30,7 +30,7 @@ const Skills = () => {
         </Typography>
       </Grid>
       <Grid item>
-        <a href={'/Prateek_Resume.pdf'} download={'Prateek_Resume.pdf'}>
+        <a href={'/Prateek_Vijay_Resume.pdf'} download={'Prateek_Resume.pdf'}>
           <img className={classes.imageContainer} src={'./skills/download.png'}/>
         </a>
       </Grid>
