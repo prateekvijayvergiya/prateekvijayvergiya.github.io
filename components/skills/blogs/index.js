@@ -16,20 +16,6 @@ const Blogs = () => {
       </Grid>
       <Grid item container alignItems="center" spacing={1}>
         <Grid item xs={2} md={4} align={'center'}>
-          <a href={'https://medium.com/@prateek.vijayudr27'}>
-            <img className={classes.imageContainer} src={'./skills/Medium.png'} />
-          </a>
-        </Grid>
-        <Grid item xs={10} md={8}>
-          <Typography gutterBottom variant={'h5'}>
-            <Link href={'https://medium.com/swlh/server-side-rendering-with-next-js-56f84f98f9bd'}>
-              Server-Side Rendering with Next.js
-          </Link>
-          </Typography>
-        </Grid>
-      </Grid>
-      <Grid item container alignItems="center" spacing={1}>
-        <Grid item xs={2} md={4} align={'center'}>
           <a href={'https://dev.to/prateekvijayvergiya'}>
             <img className={classes.imageContainer} src={'./skills/Dev_logo.png'} />
           </a>
@@ -37,7 +23,21 @@ const Blogs = () => {
         <Grid item xs={10} md={8}>
           <Typography gutterBottom variant={'h5'}>
             <Link href={'https://dev.to/prateekvijayvergiya/server-side-rendering-with-next-js-1896'}>
-              Render the components on Server-Side with Next.js
+              Server-Side Rendering with Next.js
+          </Link>
+          </Typography>
+        </Grid>
+      </Grid>
+      <Grid item container alignItems="center" spacing={1}>
+        <Grid item xs={2} md={4} align={'center'}>
+          <a href={'https://medium.com/@prateek.vijayudr27'}>
+            <img className={classes.imageContainer} src={'./skills/Medium.png'} />
+          </a>
+        </Grid>
+        <Grid item xs={10} md={8}>
+          <Typography gutterBottom variant={'h5'}>
+            <Link href={'https://prateek-vijayudr27.medium.com/easily-setup-your-cd-using-github-actions-5ff2e396bd0b'}>
+              Easily setup your CD using GitHub Actions
           </Link>
           </Typography>
         </Grid>
