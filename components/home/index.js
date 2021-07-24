@@ -39,7 +39,7 @@ const HomePage = () => {
           </Grid>
           <Grid item>
             <Typography gutterBottom>
-              Hi I am Prateek Vijayvergiya, a 23 years old Web developer living in Pune. Currently I am working with Mindtree with some great minds as a Front End Developer.
+              Hi I am Prateek Vijayvergiya, a 24 years old Web developer living in Pune. Currently I am working with Mindtree with some great minds as a Front End Developer.
           </Typography>
             <Typography>
               Apart from programming, I like to travel, to explore new places, want to trek most of the mountains of India. I am also fond of dramatics. Yeah I do accept that sometimes I crack lame jokes.
@@ -48,11 +48,12 @@ const HomePage = () => {
         </Grid>
       </Grid>
       <Spacer spacing={4} />
-      <Grid container justify="space-evenly" direction={!largeScreen ? 'column' : 'row'}>
+      {/* Hiding the section for few days */}
+      {/* <Grid container justify="space-evenly" direction={!largeScreen ? 'column' : 'row'}>
         <BottomItems value={'15 000'} text={'lines of code'} />
         <BottomItems value={'1 000 000'} text={'pixels rendered'} />
         <BottomItems value={'432'} text={'cups of coffee drunk'} />
-      </Grid>
+      </Grid> */}
     </Fragment>
   )
 }
